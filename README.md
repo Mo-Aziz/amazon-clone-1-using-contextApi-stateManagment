@@ -1,6 +1,6 @@
 # amazon clone usingcontext Api state Managment.
 
-## Web app features
+## Web app features:
 
  ###responsive design using FlexBox
  ### implemented Firebase authentication and databas
