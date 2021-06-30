@@ -1,6 +1,7 @@
 .product{
    display: flex;
    flex-direction: column;
+   justify-content:space-evenly;
    align-items: center;
    justify-content: flex-end;
    margin:10px;
@@ -25,10 +26,13 @@
 }
 
 .product >img{
-   max-height: 200px;
-   width:100%;
+    max-height: 150px;
+   width:50%; 
    object-fit: contain;
    margin-bottom: 15px;
+  
+ 
+  
 }
 
 .product >button{
