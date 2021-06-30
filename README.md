@@ -8,7 +8,7 @@
  ### shopping cart shows a welcome message to the signed in user
  ### shopping cart shows the items inside the shopping cart and calculate the total value of the items.
  ### dyanamic rating for every product.
- ###
+ ### when user sign out, user will be directed to the sign in page.
 
 ###  
 
