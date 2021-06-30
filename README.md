@@ -1,20 +1,16 @@
-# Getting Started with Create React App
+# amazon clone usingcontext Api state Managment.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Web app features
 
-## Available Scripts
+ ###responsive design using FlexBox
+ ### implemented Firebase authentication and databas
+ ### header sign in and sign out state change dynamically up to the user auth state.
+ ### shopping cart shows a welcome message to the signed in user
+ ### shopping cart shows the items inside the shopping cart and calculate the total value of the items.
+ ### dyanamic rating for every product.
+ ###
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
+###  
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
