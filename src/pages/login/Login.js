@@ -1,17 +1,33 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Login.css";
+import { auth } from"../../firebase-base";
 
 function Login() {
-   const [email, setEmail] = useState('');
-   const [password, setPassword] = useState('');
+  const history= useHistory();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-   const signIn =(e)=>{
-e.preventDefault();
-   }
-   const register =(e)=>{
-      e.preventDefault();
-   }
+  const signIn = (e) => {
+    e.preventDefault();
+    auth.signInWithEmailAndPassword(email,password).then(auth =>{
+      history.push("/")
+    }).catch(error => alert(error.message))
+  };
+
+  ///register with firebase
+  const register = (e) => {
+    e.preventDefault();
+    auth.createUserWithEmailAndPassword(email,password).then((auth) => {
+      //it is successful created a new user with email and password
+      // console.log(auth);
+      if(auth){
+        history.push('/')
+      }
+    })
+    .catch(error=> alert(error.message) )
+    
+  };
   return (
     <div className="login">
       <Link to="/">
@@ -24,10 +40,25 @@ e.preventDefault();
         <h1>Sign-in</h1>
         <form>
           <h5>E-mail</h5>
-          <input type="text"  value={email} onChange={ e => setEmail(e.target.value)}/>
+          <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <h5>Password</h5>
-          <input type="password"  value={password} onChange={e=> setPassword(e.target.value)}/>
-          <button type="submit" onClick={signIn} className="login__signInButton"> Sign In</button>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button
+            type="submit"
+            onClick={signIn}
+            className="login__signInButton"
+          >
+            {" "}
+            Sign In
+          </button>
         </form>
         <p>
           By Siging-in you agree to the AMAZON SAMPLE COLONE conditions of use &

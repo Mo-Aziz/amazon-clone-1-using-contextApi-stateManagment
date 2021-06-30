@@ -4,9 +4,15 @@ import { BiSearchAlt } from "react-icons/bi";
 import { MdAddShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../state-provider/StateProvider";
+import { auth } from "../../firebase-base";
 
 function Header() {
-  const [{basket}] =useStateValue();
+  const [{basket,user}, dispatch] =useStateValue();
+  const handleAuthentication =()=>{
+    if(user){
+      auth.signOut();
+    }
+  }
   return (
     <div className="header">
       <Link to="/">
@@ -24,10 +30,10 @@ function Header() {
       </div>
       <div className="header_nav_right">
         {/* the right side of the navbar */}
-        <Link to="/login">
-        <div className="header_option">
+        <Link to={!user && "/login"}>
+        <div onClick={handleAuthentication} className="header_option">
           <span className="header_option_one"> Hello Guest </span>
-          <span className="header_option_two"> Sign In </span>
+          <span className="header_option_two">{user ? "Sign Out": " Sign In"}</span>
         </div>
         </Link>
         <div className="header_option">
