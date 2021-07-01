@@ -44,6 +44,9 @@ display: flex;
 justify-content: space-evenly;
 
 }
+.header_nav_right >a{
+    text-decoration: none;
+}
 
 .header_option {
 display: flex;
@@ -58,7 +61,7 @@ color:white;
 
 .header_option_two {
     font-size: 13px;
-    font-weight: 800;
+    font-weight: 600;
 }
 .header_option_basket{
 display: flex;

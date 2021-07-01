@@ -17,6 +17,8 @@ border-radius: 3px;
 .subtotal_gift >span{
    margin-right:5px;
    margin-top: 10px;
+   display: flex;
+   align-items: center;
 }
 
 .subtotal > button{
