@@ -8,7 +8,13 @@
  ### shopping cart shows a welcome message to the signed in user
  ### shopping cart shows the items inside the shopping cart and calculate the total value of the items.
  ### dyanamic rating for every product.
- ### when user sign out, user will be directed to the sign in page.
+ ### when user sign out, user will be directed to the sign in page to continue for checkingout.
+ ### implemneted react-flip for the checkout cart items animations when removed from the card.
+ ### checkout payment page.
+ ### added a strip payment functionality.
+ ### cloud functionality to process stripe payment.
+ 
+ 
 
 ###  
 
