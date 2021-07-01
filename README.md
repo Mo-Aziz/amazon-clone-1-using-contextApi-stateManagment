@@ -1,4 +1,4 @@
-# amazon clone usingcontext Api state Managment.
+# amazon clone using context Api state Managment.
 
 ## Web app features:
 
