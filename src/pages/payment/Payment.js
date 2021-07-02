@@ -32,6 +32,8 @@ function Payment() {
     getClientSecret();
   }, [basket]);
 
+  console.log('THE secret is>>>', clientSecret)
+
   // handling stripe payment submit form
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -47,6 +49,11 @@ function Payment() {
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        // empty the basket after making payment action.
+        dispatch({
+          type:'EMPTY_BASKET'
+        })
 
         history.replace("/orders");
       });
